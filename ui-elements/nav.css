@@ -1,0 +1,22 @@
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .nav > li {
+    display: inline-block; }
+    .nav > li a {
+      display: block;
+      margin-right: 2px;
+      padding: 10px 15px;
+      text-decoration: none; }
+  .nav.nav-tabs > li {
+    border-bottom: 1px solid #d6d6d6; }
+    .nav.nav-tabs > li.active {
+      border: 1px solid #d6d6d6;
+      border-bottom: none; }
+      .nav.nav-tabs > li.active a {
+        color: #444; }
+    .nav.nav-tabs > li a {
+      color: #3a80ff; }
+
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,50 @@
+#page-content {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.highlight .html,
+.highlight .js,
+.highlight .code-result {
+  margin-top: 30px;
+  position: relative;
+}
+
+.highlight .html:before,
+.highlight .js:before,
+.highlight .code-result:before {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #959595;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  content: "HTML"
+}
+
+.highlight .js:before {
+  content: "JAVASCRIPT"
+}
+
+.highlight .code-result:before {
+  content: "RESULT"
+}
+
+
+.highlight pre code {
+  width: 100%;
+}
+
+[id^=btn-group-size] {
+  clear: both;
+  display: block;
+  margin-bottom: 20px;
+}
+
+[id^=btn-group-size]:after {
+  content: " ";
+  clear: both;
+  display: block;
+}

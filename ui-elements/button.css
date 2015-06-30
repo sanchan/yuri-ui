@@ -1,0 +1,49 @@
+.button {
+  background: #fff;
+  border: none;
+  border-radius: .4em;
+  color: #444;
+  cursor: pointer;
+  padding: 5px 10px; }
+  .button:hover {
+    background: #f0f0f0; }
+  .button.default {
+    border: 1px solid #d6d6d6; }
+  .button.primary {
+    background: #3a80ff;
+    color: #fff; }
+    .button.primary:hover {
+      background: #2167E6; }
+  .button.success {
+    background: #5cb85c;
+    color: #fff; }
+    .button.success:hover {
+      background: #439F43; }
+  .button.info {
+    background: #5bc0de;
+    color: #fff; }
+    .button.info:hover {
+      background: #42A7C5; }
+  .button.warning {
+    background: #f0ad4e;
+    color: #fff; }
+    .button.warning:hover {
+      background: #D79435; }
+  .button.danger {
+    background: #d9534f;
+    color: #fff; }
+    .button.danger:hover {
+      background: #C03A36; }
+  .button .icon {
+    background: #444;
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    vertical-align: middle;
+    width: 1em; }
+    .button .icon.icon-left {
+      margin-right: .5em; }
+    .button .icon.icon-right {
+      margin-left: .5em; }
+
+/*# sourceMappingURL=button.css.map */

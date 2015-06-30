@@ -1,0 +1,20 @@
+.yuri-progress-bar {
+  $bar-height: 30px;
+  border: 1px solid #d6d6d6;
+  background: #ddd;
+  height: $bar-height;
+  position: relative;
+
+  .value {
+    left: 50%;
+    line-height: $bar-height;
+    position: absolute;
+  }
+
+  .bar {
+    background: #3a80ff;
+    height: 100%;
+    transition: width 1s ease-in-out;
+    width: 0;
+  }
+}

@@ -1,0 +1,78 @@
+.button {
+  background: #fff;
+  border: none;
+  border-radius: .4em;
+  color: #444;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  &:hover {
+    background: #f0f0f0;
+  }
+
+  &.default {
+    border: 1px solid #d6d6d6;
+  }
+
+  &.primary {
+    background: #3a80ff;
+    color: #fff;
+
+    &:hover {
+      background: #2167E6;
+    }
+  }
+
+  &.success {
+    background: #5cb85c;
+    color: #fff;
+
+    &:hover {
+      background: #439F43;
+    }
+  }
+
+  &.info {
+    background: #5bc0de;
+    color: #fff;
+
+    &:hover {
+      background: #42A7C5;
+    }
+  }
+
+  &.warning {
+    background: #f0ad4e;
+    color: #fff;
+
+    &:hover {
+      background: #D79435;
+    }
+  }
+
+  &.danger {
+    background: #d9534f;
+    color: #fff;
+
+    &:hover {
+      background: #C03A36;
+    }
+  }
+
+  .icon {
+    background: #444;
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    vertical-align: middle;
+    width: 1em;
+
+    &.icon-left {
+      margin-right: .5em;
+    }
+
+    &.icon-right {
+      margin-left: .5em;
+    }
+  }
+}

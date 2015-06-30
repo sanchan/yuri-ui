@@ -1,0 +1,40 @@
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+
+    &.active {
+      a {
+      }
+    }
+
+    a {
+      display: block;
+      margin-right: 2px;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+  }
+
+  &.nav-tabs {
+    > li {
+      border-bottom: 1px solid #d6d6d6;
+
+      &.active {
+        border: 1px solid #d6d6d6;
+        border-bottom: none;
+
+        a {
+          color: #444;
+        }
+      }
+
+      a {
+        color: #3a80ff;
+      }
+    }
+  }
+}

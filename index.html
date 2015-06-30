@@ -1,0 +1,2192 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/docs.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <script src="jquery.js"></script>
+    <script src="yuri.js"></script>
+
+
+    <link rel="stylesheet" href="prettify/tomorrow-night.css">
+    <script src="prettify/prettify.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery)
+    </script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        /*** Buttons ***/
+        Yuri.ui({
+          view: "button",
+          el: "#button-default",
+          text: "Default"
+        });
+
+        Yuri.ui({
+          view: "button",
+          el: "#button-primary",
+          type: "primary",
+          text: "Primary",
+          icon: "star"
+        });
+
+        Yuri.ui({
+          view: "button",
+          el: "#button-success",
+          type: "success",
+          text: "Success"
+        });
+
+        Yuri.ui({
+          view: "button",
+          el: "#button-info",
+          type: "info",
+          text: "Info"
+        });
+
+        Yuri.ui({
+          view: "button",
+          el: "#button-warning",
+          type: "warning",
+          text: "Warning"
+        });
+
+        Yuri.ui({
+          view: "button",
+          el: "#button-danger",
+          type: "danger",
+          text: "Danger"
+        });
+
+
+        /*** Dropdown ***/
+        Yuri.ui({
+          view: "dropdown",
+          el: "#dropdown",
+          id: "dropdown-1",
+          text: "Dropdown",
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        /*** Button dropdowns ***/
+        // Single button dropdowns
+        Yuri.ui({
+          view: "dropdown",
+          el: "#button-dropdown-grouped-default",
+          id: "button-dropdown-grouped-default-btn",
+          text: "Default",
+          grouped: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#button-dropdown-grouped-primary",
+          id: "button-dropdown-grouped-primary-btn",
+          type: "primary",
+          text: "Primary",
+          grouped: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#button-dropdown-grouped-success",
+          id: "button-dropdown-grouped-success-btn",
+          type: "success",
+          text: "Success",
+          grouped: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#button-dropdown-grouped-info",
+          id: "button-dropdown-grouped-info-btn",
+          type: "info",
+          text: "Info",
+          grouped: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#button-dropdown-grouped-warning",
+          id: "button-dropdown-grouped-warning-btn",
+          type: "warning",
+          text: "Warning",
+          grouped: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#button-dropdown-grouped-danger",
+          id: "button-dropdown-grouped-danger-btn",
+          type: "danger",
+          text: "Danger",
+          grouped: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        // Split button dropdowns
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-dropdown-grouped-split-default",
+          id: "btn-dropdown-grouped-split-default-btn",
+          text: "Default",
+          split: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-dropdown-grouped-split-primary",
+          id: "btn-dropdown-grouped-split-primary-btn",
+          type: "primary",
+          text: "Primary",
+          split: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-dropdown-grouped-split-success",
+          id: "btn-dropdown-grouped-split-success-btn",
+          type: "success",
+          text: "Success",
+          split: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-dropdown-grouped-split-info",
+          id: "btn-dropdown-grouped-split-info-btn",
+          type: "info",
+          text: "Info",
+          split: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+
+        // Sizing
+        Yuri.ui({
+          view: "button-toolbar",
+          el: "#btn-toolbar-size-lg",
+          size: "lg",
+          groups: [
+            {
+              id: "btn-toolbar-size-lg-group-1",
+              buttons: [
+                {
+                  id: "btn-toolbar-size-lg-btn-1",
+                  text: "Default",
+                  icon: "star"
+                },
+                {
+                  id: "btn-toolbar-size-lg-btn-2",
+                  type: "primary",
+                  text: "Primary"
+                },
+                {
+                  id: "btn-toolbar-size-lg-btn-3",
+                  type: "info",
+                  text: "Info"
+                },
+                {
+                  view: "dropdown",
+                  id: "btn-toolbar-size-lg-dropdown-1",
+                  text: "Dropdown",
+                  menuAlign: "right",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                }
+              ]
+            },
+            {
+              id: "btn-toolbar-size-lg-group-2",
+              buttons: [
+                {
+                  view: "dropdown",
+                  id: "btn-toolbar-size-lg-dropdown-2",
+                  text: "Dropdown",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                },
+                {
+                  id: "btn-toolbar-size-lg-btn-4",
+                  text: "Info"
+                }
+              ]
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "button-toolbar",
+          el: "#btn-toolbar-size-default",
+          groups: [
+            {
+              id: "btn-toolbar-size-default-group-1",
+              buttons: [
+                {
+                  id: "btn-toolbar-size-default-btn-1",
+                  text: "Default",
+                  icon: "star"
+                },
+                {
+                  id: "btn-toolbar-size-default-btn-2",
+                  type: "primary",
+                  text: "Primary"
+                },
+                {
+                  id: "btn-toolbar-size-default-btn-3",
+                  type: "info",
+                  text: "Info"
+                },
+                {
+                  view: "dropdown",
+                  id: "btn-toolbar-size-default-dropdown-1",
+                  text: "Dropdown",
+                  menuAlign: "right",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                }
+              ]
+            },
+            {
+              id: "btn-toolbar-size-default-group-2",
+              buttons: [
+                {
+                  view: "dropdown",
+                  id: "btn-toolbar-size-default-dropdown-2",
+                  text: "Dropdown",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                },
+                {
+                  id: "btn-toolbar-size-default-btn-4",
+                  text: "Info"
+                }
+              ]
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "button-toolbar",
+          el: "#btn-toolbar-size-sm",
+          size: "sm",
+          groups: [
+            {
+              id: "btn-toolbar-size-sm-group-1",
+              buttons: [
+                {
+                  id: "btn-toolbar-size-sm-btn-1",
+                  text: "Default",
+                  icon: "star"
+                },
+                {
+                  id: "btn-toolbar-size-sm-btn-2",
+                  type: "primary",
+                  text: "Primary"
+                },
+                {
+                  id: "btn-toolbar-size-sm-btn-3",
+                  type: "info",
+                  text: "Info"
+                },
+                {
+                  view: "dropdown",
+                  id: "btn-toolbar-size-sm-dropdown-1",
+                  text: "Dropdown",
+                  menuAlign: "right",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                }
+              ]
+            },
+            {
+              id: "btn-toolbar-size-sm-group-2",
+              buttons: [
+                {
+                  view: "dropdown",
+                  id: "btn-toolbar-size-sm-dropdown-2",
+                  text: "Dropdown",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                },
+                {
+                  id: "btn-toolbar-size-sm-btn-4",
+                  text: "Info"
+                }
+              ]
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "button-toolbar",
+          el: "#btn-toolbar-size-xs",
+          size: "xs",
+          groups: [
+            {
+              id: "btn-toolbar-size-xs-group-1",
+              buttons: [
+                {
+                  id: "btn-toolbar-size-xs-btn-1",
+                  text: "Default",
+                  icon: "star"
+                },
+                {
+                  id: "btn-toolbar-size-xs-btn-2",
+                  type: "primary",
+                  text: "Primary"
+                },
+                {
+                  id: "btn-toolbar-size-xs-btn-3",
+                  type: "info",
+                  text: "Info"
+                },
+                {
+                  view: "dropdown",
+                  id: "btn-toolbar-size-xs-dropdown-1",
+                  text: "Dropdown",
+                  menuAlign: "right",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                }
+              ]
+            },
+            {
+              id: "btn-toolbar-size-xs-group-2",
+              buttons: [
+                {
+                  view: "dropdown",
+                  id: "btn-toolbar-size-xs-dropdown-2",
+                  text: "Dropdown",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                },
+                {
+                  id: "btn-toolbar-size-xs-btn-4",
+                  text: "Info"
+                }
+              ]
+            }
+          ]
+        });
+
+        /*** Button Group ***/
+        Yuri.ui({
+          view: "button-group",
+          el: "#btn-group",
+          buttons: [
+            {
+              id: "button-group-btn-1",
+              text: "Default",
+              icon: "star"
+            },
+            {
+              id: "button-group-btn-2",
+              type: "primary",
+              text: "Primary"
+            },
+            {
+              id: "button-group-btn-3",
+              type: "info",
+              text: "Info"
+            },
+            {
+              view: "dropdown",
+              id: "button-group-dropdown-1",
+              text: "Dropdown",
+              menuAlign: "right",
+              menu: [
+                {type: "header", text: "Menu Header 1"},
+                {text: "Menu Item 1"},
+                {text: "Menu Item 2", disabled: true},
+                {type: "divider"},
+                {type: "header", text: "Menu Header 2"},
+                {text: "Menu Item 3"}
+              ]
+            }
+          ]
+        });
+
+        // Button Toolbar
+        Yuri.ui({
+          view: "button-toolbar",
+          el: "#btn-toolbar",
+          groups: [
+            {
+              id: "button-toolbar-group-1",
+              buttons: [
+                {
+                  id: "button-toolbar-btn-1",
+                  text: "Default",
+                  icon: "star"
+                },
+                {
+                  id: "button-toolbar-btn-2",
+                  type: "primary",
+                  text: "Primary"
+                },
+                {
+                  id: "button-toolbar-btn-3",
+                  type: "info",
+                  text: "Info"
+                },
+                {
+                  view: "dropdown",
+                  id: "button-toolbar-dropdown-1",
+                  text: "Dropdown",
+                  menuAlign: "right",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                }
+              ]
+            },
+            {
+              id: "button-toolbar-group-2",
+              buttons: [
+                {
+                  view: "dropdown",
+                  id: "button-toolbar-dropdown-2",
+                  text: "Dropdown",
+                  menu: [
+                    {type: "header", text: "Menu Header 1"},
+                    {text: "Menu Item 1"},
+                    {text: "Menu Item 2", disabled: true},
+                    {type: "divider"},
+                    {type: "header", text: "Menu Header 2"},
+                    {text: "Menu Item 3"}
+                  ]
+                },
+                {
+                  id: "button-toolbar-btn-4",
+                  text: "Info"
+                }
+              ]
+            }
+          ]
+        });
+
+        // Sizing
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-dropdown-grouped-size-lg",
+          id: "btn-dropdown-grouped-size-lg-btn",
+          text: "Large",
+          grouped: true,
+          size: "lg",
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-dropdown-grouped-size-default",
+          id: "btn-dropdown-grouped-size-default-btn",
+          text: "Default",
+          grouped: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-dropdown-grouped-size-sm",
+          id: "btn-dropdown-grouped-size-sm-btn",
+          text: "Small",
+          grouped: true,
+          size: "sm",
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-dropdown-grouped-size-xs",
+          id: "btn-dropdown-grouped-size-xs-btn",
+          text: "Extra small",
+          grouped: true,
+          size: "xs",
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        // Dropup variation
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-toolbar-dropup",
+          id: "btn-toolbar-dropup-btn",
+          text: "Dropup",
+          grouped: true,
+          dropup: true,
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        Yuri.ui({
+          view: "dropdown",
+          el: "#btn-toolbar-right-dropup",
+          id: "btn-toolbar-dropup-right-btn",
+          text: "Right dropup",
+          grouped: true,
+          type: "primary",
+          dropup: true,
+          menuAlign: "right",
+          menu: [
+            {type: "header", text: "Menu Header 1"},
+            {text: "Menu Item 1"},
+            {text: "Menu Item 2", disabled: true},
+            {type: "divider"},
+            {type: "header", text: "Menu Header 2"},
+            {text: "Menu Item 3"}
+          ]
+        });
+
+        // Vertical variation
+        Yuri.ui({
+          view: "button-group",
+          el: "#btn-group-vertical",
+          vertical: true,
+          buttons: [
+            {
+              id: "btn-group-vertical-btn-1",
+              text: "Default",
+              icon: "star"
+            },
+            {
+              view: "dropdown",
+              id: "btn-group-vertical-dropdown-1",
+              text: "Dropdown",
+              menu: [
+                {type: "header", text: "Menu Header 1"},
+                {text: "Menu Item 1"},
+                {text: "Menu Item 2", disabled: true},
+                {type: "divider"},
+                {type: "header", text: "Menu Header 2"},
+                {text: "Menu Item 3"}
+              ]
+            },
+            {
+              id: "btn-group-vertical-btn-2",
+              type: "primary",
+              text: "Primary"
+            },
+            {
+              id: "btn-group-vertical-btn-3",
+              type: "info",
+              text: "Info"
+            }
+          ]
+        });
+
+        // Justified button groups
+        Yuri.ui({
+          view: "button-group",
+          el: "#btn-group-justified",
+          justified: true,
+          buttons: [
+            {
+              id: "btn-group-justified-btn-1",
+              text: "Default",
+              icon: "star"
+            },
+            {
+              view: "dropdown",
+              id: "btn-group-justified-dropdown-1",
+              text: "Dropdown",
+              menu: [
+                {type: "header", text: "Menu Header 1"},
+                {text: "Menu Item 1"},
+                {text: "Menu Item 2", disabled: true},
+                {type: "divider"},
+                {type: "header", text: "Menu Header 2"},
+                {text: "Menu Item 3"}
+              ]
+            },
+            {
+              id: "btn-group-justified-btn-2",
+              type: "primary",
+              text: "Primary"
+            },
+            {
+              id: "btn-group-justified-btn-3",
+              type: "info",
+              text: "Info"
+            }
+          ]
+        });
+
+        /*** Input groups ***/
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-1",
+          items: [
+            {
+              view: "addon",
+              text: "@"
+            },
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-input-1",
+              placeholder: "Username"
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-2",
+          items: [
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-input-2"
+            },
+            {
+              view: "addon",
+              text: ".00"
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-3",
+          items: [
+            {
+              view: "addon",
+              text: "$"
+            },
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-input-3"
+            },
+            {
+              view: "addon",
+              text: ".00"
+            }
+          ]
+        });
+
+        // Sizing
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-size-lg",
+          size: "lg",
+          items: [
+            {
+              view: "addon",
+              text: "@"
+            },
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-size-lg-input",
+              placeholder: "Username"
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-size-default",
+          items: [
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-size-default-input",
+            },
+            {
+              view: "addon",
+              text: ".00"
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-size-sm",
+          size: "sm",
+          items: [
+            {
+              view: "addon",
+              text: "$"
+            },
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-size-sm-input",
+            },
+            {
+              view: "addon",
+              text: ".00"
+            }
+          ]
+        });
+
+        // Checkboxes and radio addons
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-checkbox",
+          items: [
+            {
+              view: "input",
+              type: "checkbox",
+              id: "input-group-checkbox-input"
+            },
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-checkbox-text"
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-radio",
+          items: [
+            {
+              view: "input",
+              type: "radio",
+              id: "input-group-radio-input",
+            },
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-radio-text"
+            }
+          ]
+        });
+
+        // Button addons
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-button-addon",
+          items: [
+            {
+              view: "button",
+              text: "Go!",
+              id: "input-group-button-addon-btn"
+            },
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-button-addon-text"
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-button-addon-right",
+          items: [
+            {
+              view: "input",
+              type: "text",
+              id: "input-group-button-addon-right-text"
+            },
+            {
+              view: "button",
+              text: "Go!",
+              id: "input-group-button-addon-right-btn",
+            }
+          ]
+        });
+
+        // Buttons with dropdowns
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-button-dropdown-addon",
+          items: [
+            {
+              view: "dropdown",
+              id: "input-group-button-dropdown-addon-btn",
+              text: "Action",
+              menu: [
+                {type: "header", text: "Menu Header 1"},
+                {text: "Menu Item 1"},
+                {text: "Menu Item 2", disabled: true},
+                {type: "divider"},
+                {type: "header", text: "Menu Header 2"},
+                {text: "Menu Item 3"}
+              ]
+            },
+            {
+              view: "input",
+              id: "input-group-button-dropdown-addon-text",
+              type: "text"
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-button-dropdown-addon-right",
+          items: [
+            {
+              view: "input",
+              id: "input-group-button-dropdown-addon-right-text",
+              type: "text"
+            },
+            {
+              view: "dropdown",
+              id: "input-group-button-dropdown-addon-right-btn",
+              text: "Action",
+              menu: [
+                {type: "header", text: "Menu Header 1"},
+                {text: "Menu Item 1"},
+                {text: "Menu Item 2", disabled: true},
+                {type: "divider"},
+                {type: "header", text: "Menu Header 2"},
+                {text: "Menu Item 3"}
+              ]
+            }
+          ]
+        });
+
+        // Segmented buttons
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-button-segmented",
+          items: [
+            {
+              view: "dropdown",
+              id: "input-group-button-segmented-btn",
+              text: "Action",
+              split: true,
+              menu: [
+                {type: "header", text: "Menu Header 1"},
+                {text: "Menu Item 1"},
+                {text: "Menu Item 2", disabled: true},
+                {type: "divider"},
+                {type: "header", text: "Menu Header 2"},
+                {text: "Menu Item 3"}
+              ]
+            },
+            {
+              view: "input",
+              id: "input-group-button-dropdown-addon-text",
+              type: "text"
+            }
+          ]
+        });
+
+        Yuri.ui({
+          view: "input-group",
+          el: "#input-group-button-segmented-right",
+          items: [
+            {
+              view: "input",
+              id: "input-group-button-segmented-right-text",
+              type: "text"
+            },
+            {
+              view: "dropdown",
+              id: "input-group-button-segmented-right-btn",
+              text: "Action",
+              split: true,
+              menuAlign: "right",
+              menu: [
+                {type: "header", text: "Menu Header 1"},
+                {text: "Menu Item 1"},
+                {text: "Menu Item 2", disabled: true},
+                {type: "divider"},
+                {type: "header", text: "Menu Header 2"},
+                {text: "Menu Item 3"}
+              ]
+            }
+          ]
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*** Progress Bar ***/
+        // Basic example
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar",
+          value: 80
+        });
+
+        // With label
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-with-label",
+          value: 80,
+          withLabel: true,
+          label: function (value) {
+            return value + "% Complete"
+          }
+        });
+
+        // Contextual alternative
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-success",
+          value: 40,
+          type: "success"
+        });
+
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-info",
+          value: 20,
+          type: "info"
+        });
+
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-warning",
+          value: 60,
+          type: "warning"
+        });
+
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-danger",
+          value: 80,
+          type: "danger"
+        });
+
+        // Striped
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-success-striped",
+          value: 40,
+          type: "success",
+          striped: true
+        });
+
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-info-striped",
+          value: 20,
+          type: "info",
+          striped: true
+        });
+
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-warning-striped",
+          value: 60,
+          type: "warning",
+          striped: true
+        });
+
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-danger-striped",
+          value: 80,
+          type: "danger",
+          striped: true
+        });
+
+        // Active
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-active",
+          value: 40,
+          type: "success",
+          active: true,
+          striped: true
+        });
+
+        // Stacked
+        Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-stacked",
+          value: [
+            {value: 35, type: "success"},
+            {value: 20, type: "warning", striped: true},
+            {value: 10, type: "danger"}
+          ],
+          type: "success",
+          active: true,
+          striped: true
+        });
+
+        // Animated
+        var pb = Yuri.ui({
+          view: "progress-bar",
+          el: "#progress-bar-animated",
+          striped: true,
+          active: true,
+          animationDuration: 1000,
+          withLabel: true,
+          value: 80
+        });
+
+        setInterval(function(){
+          pb.value(Math.floor((Math.random() * 100)));
+        }, 2000);
+
+        // Navs
+        Yuri.ui({
+          view: "nav",
+          el: "#nav-tabs",
+          entries: [
+            {
+              text: "Tab 1"
+            },
+            {
+              text: "Tab 2",
+              active: true
+            },
+            {
+              text: "Tab 3"
+            }
+          ]
+        });
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="page-content">
+      <!-- http://inspiretrends.com/bootstrap-tools-and-generators/ -->
+      <!-- http://www.layoutit.com/ -->
+
+      <!--
+        TOOLS
+        http://www.freeformatter.com/html-formatter.html
+        http://www.opinionatedgeek.com/DotNet/Tools/HTMLEncode/Encode.aspx
+
+        LE COMPETENCIE
+        http://angular-ui.github.io/bootstrap/
+      -->
+
+      <h1>Buttons</h1>
+      <p>For buttons you can define the contextual type setting the <code>type</code> option. The valid <code>type</code> values are <code>"default", "primary", "success", "info", "warning", "danger"</code>.</p>
+      <p>Also you can set an icon setting the <code>icon</code> option. You can use any prefix used by <code>Glyphicon</code> icons set. For example, if you want to use the <code>glyphicon-star</code> icon, the you just need to set <code>icon: "star"</code>:</p>
+      <div class="bs-example">
+        <button id="button-default"></button>
+        <button id="button-primary"></button>
+        <button id="button-success"></button>
+        <button id="button-info"></button>
+        <button id="button-warning"></button>
+        <button id="button-danger"></button>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;button id=&quot;button-primary&quot;&gt;&lt;/button&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;button&quot;,
+  el: &quot;#button-primary&quot;,
+  type: &quot;primary&quot;,
+  text: &quot;Primary&quot;,
+  icon: &quot;star&quot;
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;button id=&quot;button-primary&quot; class=&quot;btn btn-primary&quot;&gt;&lt;span class=&quot;text&quot;&gt;Primary  &lt;/span&gt;&lt;span class=&quot;glyphicon glyphicon-star&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h1>Dropdowns</h1>
+      <h3>Example</h3>
+      <div class="bs-example">
+        <div id="dropdown" class="clearfix"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;dropdown&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+    view: "dropdown",
+    el: "#dropdown",
+    id: "dropdown-1",
+    text: "Dropdown",
+    menu: [
+      {type: "header", text: "Menu Header 1"},
+      {text: "Menu Item 1"},
+      {text: "Menu Item 2", disabled: true},
+      {type: "divider"},
+      {type: "header", text: "Menu Header 2"},
+      {text: "Menu Item 3"}
+    ]
+  });
+          </pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;dropdown&quot; class=&quot;clearfix dropdown&quot;&gt;
+    &lt;button class=&quot;btn dropdown-toggle btn-default&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; id=&quot;dropdown-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;Dropdown &lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dropdown-1&quot;&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 1&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;disabled&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 2&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+          </pre>
+        </div>
+      </div>
+
+      <h3>Alignment</h3>
+      <p>By default the dropdown menu is left aligned, but you can align it to the right adding the option <code>menuAlign: "right"</code>:</p>
+      <pre class="prettyprint linenums">Yuri.ui({
+  view: "dropdown",
+  ...
+  menuAlign: "right"
+  ...
+});</pre>
+
+      <h3>Headers</h3>
+      <p>You can define a menu item as a menu header adding the option <code>type: "header"</code> to the item:</p>
+
+      <pre class="prettyprint linenums">menu: [
+  {type: "header", text: "Menu Header 1"},
+  ...
+]</pre>
+
+      <h3>Disabled menu items</h3>
+      <p>You can disable a menu item adding the option <code>disabled: true</code> to the item:</p>
+
+      <pre class="prettyprint linenums">menu: [
+  {text: "Menu Header 1", disabled: true},
+  ...
+]</pre>
+
+
+
+      <h1>Button groups</h1>
+      <h3>Basic example</h3>
+      <div class="bs-example">
+        <div id="btn-group"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-group&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;button-group&quot;,
+  el: &quot;#btn-group&quot;,
+  buttons: [
+    {
+      id: &quot;button-group-btn-1&quot;,
+      text: &quot;Default&quot;,
+      icon: &quot;star&quot;
+    },
+    {
+      id: &quot;button-group-btn-2&quot;,
+      type: &quot;primary&quot;,
+      text: &quot;Primary&quot;
+    },
+    {
+      id: &quot;button-group-btn-3&quot;,
+      type: &quot;info&quot;,
+      text: &quot;Info&quot;
+    },
+    {
+      view: &quot;dropdown&quot;,
+      id: &quot;button-group-dropdown-1&quot;,
+      text: &quot;Dropdown&quot;,
+      menuAlign: &quot;right&quot;,
+      menu: [
+        {type: &quot;header&quot;, text: &quot;Menu Header 1&quot;},
+        {text: &quot;Menu Item 1&quot;},
+        {text: &quot;Menu Item 2&quot;, disabled: true},
+        {type: &quot;divider&quot;},
+        {type: &quot;header&quot;, text: &quot;Menu Header 2&quot;},
+        {text: &quot;Menu Item 3&quot;}
+      ]
+    }
+  ]
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div class=&quot;btn-group dropdown&quot; id=&quot;button-group-dropdown-1-3&quot;&gt;
+  &lt;button class=&quot;btn dropdown-toggle btn-default&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; id=&quot;button-group-dropdown-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;Dropdown &lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot; aria-labelledby=&quot;button-group-dropdown-1&quot;&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 1&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;disabled&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 2&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Button toolbar</h3>
+      <div class="bs-example">
+        <div id="btn-toolbar"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-toolbar&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;button-toolbar&quot;,
+  el: &quot;#btn-toolbar&quot;,
+  groups: [
+    {
+      id: &quot;button-toolbar-group-1&quot;,
+      buttons: [
+        {
+          id: &quot;button-toolbar-btn-1&quot;,
+          text: &quot;Default&quot;,
+          icon: &quot;star&quot;
+        },
+        {
+          id: &quot;button-toolbar-btn-2&quot;,
+          type: &quot;primary&quot;,
+          text: &quot;Primary&quot;
+        },
+        {
+          id: &quot;button-toolbar-btn-3&quot;,
+          type: &quot;info&quot;,
+          text: &quot;Info&quot;
+        },
+        {
+          view: &quot;dropdown&quot;,
+          id: &quot;button-toolbar-dropdown-1&quot;,
+          text: &quot;Dropdown&quot;,
+          menuAlign: &quot;right&quot;,
+          menu: [
+            {type: &quot;header&quot;, text: &quot;Menu Header 1&quot;},
+            {text: &quot;Menu Item 1&quot;},
+            {text: &quot;Menu Item 2&quot;, disabled: true},
+            {type: &quot;divider&quot;},
+            {type: &quot;header&quot;, text: &quot;Menu Header 2&quot;},
+            {text: &quot;Menu Item 3&quot;}
+          ]
+        }
+      ]
+    },
+    {
+      id: &quot;button-toolbar-group-2&quot;,
+      buttons: [
+        {
+          view: &quot;dropdown&quot;,
+          id: &quot;button-toolbar-dropdown-2&quot;,
+          text: &quot;Dropdown&quot;,
+          menu: [
+            {type: &quot;header&quot;, text: &quot;Menu Header 1&quot;},
+            {text: &quot;Menu Item 1&quot;},
+            {text: &quot;Menu Item 2&quot;, disabled: true},
+            {type: &quot;divider&quot;},
+            {type: &quot;header&quot;, text: &quot;Menu Header 2&quot;},
+            {text: &quot;Menu Item 3&quot;}
+          ]
+        },
+        {
+          id: &quot;button-toolbar-btn-4&quot;,
+          text: &quot;Info&quot;
+        }
+      ]
+    }
+  ]
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-toolbar&quot; class=&quot;btn-toolbar&quot; role=&quot;toolbar&quot;&gt;
+  &lt;div id=&quot;button-toolbar-group-1&quot; class=&quot;btn-group&quot;&gt;
+    &lt;button id=&quot;button-toolbar-btn-1&quot; class=&quot;btn btn-default&quot;&gt;&lt;span class=&quot;text&quot;&gt;Default  &lt;/span&gt;&lt;span class=&quot;glyphicon glyphicon-star&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;button id=&quot;button-toolbar-btn-2&quot; class=&quot;btn btn-primary&quot;&gt;&lt;span class=&quot;text&quot;&gt;Primary &lt;/span&gt;&lt;/button&gt;&lt;button id=&quot;button-toolbar-btn-3&quot; class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;text&quot;&gt;Info &lt;/span&gt;&lt;/button&gt;
+    &lt;div class=&quot;btn-group dropdown&quot; id=&quot;button-toolbar-dropdown-1-3&quot;&gt;
+      &lt;button class=&quot;btn dropdown-toggle btn-default&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; id=&quot;button-toolbar-dropdown-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;Dropdown &lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot; aria-labelledby=&quot;button-toolbar-dropdown-1&quot;&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 1&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;disabled&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 2&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;button-toolbar-group-2&quot; class=&quot;btn-group&quot;&gt;
+    &lt;div class=&quot;btn-group dropdown&quot; id=&quot;button-toolbar-dropdown-2-0&quot;&gt;
+      &lt;button class=&quot;btn dropdown-toggle btn-default&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; id=&quot;button-toolbar-dropdown-2&quot;&gt;&lt;span class=&quot;text&quot;&gt;Dropdown &lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;button-toolbar-dropdown-2&quot;&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 1&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;disabled&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 2&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;button id=&quot;button-toolbar-btn-4&quot; class=&quot;btn btn-default&quot;&gt;&lt;span class=&quot;text&quot;&gt;Info &lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Sizing</h3>
+      You can set the button group size setting the <code>size</code> option. The valid options are <code>"lg", "sm", "sx"</code>. If none is given, then the default size is going to be used.
+      <div class="bs-example">
+        <div id="btn-toolbar-size-lg"></div>
+        <div id="btn-toolbar-size-default"></div>
+        <div id="btn-toolbar-size-sm"></div>
+        <div id="btn-toolbar-size-xs"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-toolbar-size-lg&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Vertical variation</h3>
+      <div class="bs-example">
+        <div id="btn-group-vertical"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-group-vertical&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;button-group&quot;,
+  el: &quot;#btn-group-vertical&quot;,
+  vertical: true,
+  buttons: [
+    {
+      id: &quot;btn-group-vertical-btn-1&quot;,
+      text: &quot;Default&quot;,
+      icon: &quot;star&quot;
+    },
+    {
+      view: &quot;dropdown&quot;,
+      id: &quot;btn-group-vertical-dropdown-1&quot;,
+      text: &quot;Dropdown&quot;,
+      menu: [
+        {type: &quot;header&quot;, text: &quot;Menu Header 1&quot;},
+        {text: &quot;Menu Item 1&quot;},
+        {text: &quot;Menu Item 2&quot;, disabled: true},
+        {type: &quot;divider&quot;},
+        {type: &quot;header&quot;, text: &quot;Menu Header 2&quot;},
+        {text: &quot;Menu Item 3&quot;}
+      ]
+    },
+    {
+      id: &quot;btn-group-vertical-btn-2&quot;,
+      type: &quot;primary&quot;,
+      text: &quot;Primary&quot;
+    },
+    {
+      id: &quot;btn-group-vertical-btn-3&quot;,
+      type: &quot;info&quot;,
+      text: &quot;Info&quot;
+    }
+  ]
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-group-vertical&quot; class=&quot;btn-group-vertical&quot;&gt;
+  &lt;button id=&quot;btn-group-vertical-btn-1&quot; class=&quot;btn btn-default&quot;&gt;&lt;span class=&quot;text&quot;&gt;Default  &lt;/span&gt;&lt;span class=&quot;glyphicon glyphicon-star&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;div class=&quot;btn-group dropdown&quot; id=&quot;btn-group-vertical-dropdown-1-1&quot;&gt;
+    &lt;button class=&quot;btn dropdown-toggle btn-default&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; id=&quot;btn-group-vertical-dropdown-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;Dropdown &lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;btn-group-vertical-dropdown-1&quot;&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 1&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;disabled&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 2&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;button id=&quot;btn-group-vertical-btn-2&quot; class=&quot;btn btn-primary&quot;&gt;&lt;span class=&quot;text&quot;&gt;Primary &lt;/span&gt;&lt;/button&gt;&lt;button id=&quot;btn-group-vertical-btn-3&quot; class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;text&quot;&gt;Info &lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Justified button groups</h3>
+      <div class="bs-example">
+        <div id="btn-group-justified"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-group-justified&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;button-group&quot;,
+  el: &quot;#btn-group-justified&quot;,
+  justified: true,
+  buttons: [
+    {
+      id: &quot;btn-group-justified-btn-1&quot;,
+      text: &quot;Default&quot;,
+      icon: &quot;star&quot;
+    },
+    {
+      view: &quot;dropdown&quot;,
+      id: &quot;btn-group-justified-dropdown-1&quot;,
+      text: &quot;Dropdown&quot;,
+      menu: [
+        {type: &quot;header&quot;, text: &quot;Menu Header 1&quot;},
+        {text: &quot;Menu Item 1&quot;},
+        {text: &quot;Menu Item 2&quot;, disabled: true},
+        {type: &quot;divider&quot;},
+        {type: &quot;header&quot;, text: &quot;Menu Header 2&quot;},
+        {text: &quot;Menu Item 3&quot;}
+      ]
+    },
+    {
+      id: &quot;btn-group-justified-btn-2&quot;,
+      type: &quot;primary&quot;,
+      text: &quot;Primary&quot;
+    },
+    {
+      id: &quot;btn-group-justified-btn-3&quot;,
+      type: &quot;info&quot;,
+      text: &quot;Info&quot;
+    }
+  ]
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-group-justified&quot; class=&quot;btn-group btn-group-justified&quot;&gt;
+  &lt;a id=&quot;btn-group-justified-btn-1&quot; class=&quot;btn btn-default&quot;&gt;&lt;span class=&quot;text&quot;&gt;Default  &lt;/span&gt;&lt;span class=&quot;glyphicon glyphicon-star&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;div class=&quot;btn-group dropdown&quot; id=&quot;btn-group-justified-dropdown-1-1&quot;&gt;
+    &lt;a class=&quot;btn dropdown-toggle btn-default&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; id=&quot;btn-group-justified-dropdown-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;Dropdown &lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;btn-group-justified-dropdown-1&quot;&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 1&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;disabled&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 2&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;a id=&quot;btn-group-justified-btn-2&quot; class=&quot;btn btn-primary&quot;&gt;&lt;span class=&quot;text&quot;&gt;Primary &lt;/span&gt;&lt;/a&gt;&lt;a id=&quot;btn-group-justified-btn-3&quot; class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;text&quot;&gt;Info &lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <!-- Button dropdowns -->
+      <h1>Button dropdowns</h1>
+      <h3>Single button dropdowns</h3>
+      <div class="bs-example">
+        <div id="button-dropdown-grouped-default"></div>
+        <div id="button-dropdown-grouped-primary"></div>
+        <div id="button-dropdown-grouped-success"></div>
+        <div id="button-dropdown-grouped-info"></div>
+        <div id="button-dropdown-grouped-warning"></div>
+        <div id="button-dropdown-grouped-danger"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;button-dropdown-grouped-default&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;dropdown&quot;,
+  el: &quot;#button-dropdown-grouped-default&quot;,
+  id: &quot;button-dropdown-grouped-default-btn&quot;,
+  text: &quot;Default&quot;,
+  grouped: true,
+  menu: [
+    {type: &quot;header&quot;, text: &quot;Menu Header 1&quot;},
+    {text: &quot;Menu Item 1&quot;},
+    {text: &quot;Menu Item 2&quot;, disabled: true},
+    {type: &quot;divider&quot;},
+    {type: &quot;header&quot;, text: &quot;Menu Header 2&quot;},
+    {text: &quot;Menu Item 3&quot;}
+  ]
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;button-dropdown-grouped-default&quot; class=&quot;btn-group&quot;&gt;
+  &lt;button class=&quot;btn dropdown-toggle btn-default&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; id=&quot;button-dropdown-grouped-default-btn&quot;&gt;&lt;span class=&quot;text&quot;&gt;Default &lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;button-dropdown-grouped-default-btn&quot;&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 1&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;disabled&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Menu Header 2&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Split button dropdowns</h3>
+      <p><code>FIXME</code></p>
+      <div class="bs-example">
+        <div id="btn-dropdown-grouped-split-default"></div>
+        <div id="btn-dropdown-grouped-split-primary"></div>
+        <div id="btn-dropdown-grouped-split-success"></div>
+        <div id="btn-dropdown-grouped-split-info"></div>
+        <div id="btn-dropdown-grouped-split-warning"></div>
+        <div id="btn-dropdown-grouped-split-danger"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;button-dropdown-grouped-split-default&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Sizing</h3>
+      <p><code>FIXME</code></p>
+      <div class="bs-example">
+        <div id="btn-dropdown-grouped-size-lg"></div>
+        <div id="btn-dropdown-grouped-size-default"></div>
+        <div id="btn-dropdown-grouped-size-sm"></div>
+        <div id="btn-dropdown-grouped-size-xs"></div>
+      </div>
+
+      <h3>Dropup variation</h3>
+      <div class="bs-example">
+        <div id="btn-toolbar-dropup"></div>
+        <div id="btn-toolbar-right-dropup"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;btn-toolbar-right-dropup&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <!-- Input groups -->
+      <h1>Input groups</h1>
+      <h3>Basic example</h3>
+      <form class="bs-example bs-example-form" role="form">
+        <div id="input-group-1"></div>
+        <div id="input-group-2"></div>
+        <div id="input-group-3"></div>
+      </form>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;input-group-1&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Sizing</h3>
+      <form class="bs-example bs-example-form" role="form">
+        <div id="input-group-size-lg"></div>
+        <div id="input-group-size-default"></div>
+        <div id="input-group-size-sm"></div>
+      </form>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;xxxxxxx&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Checkboxes and radio addons</h3>
+      <form class="bs-example bs-example-form" role="form">
+        <div class="row">
+          <div class="col-lg-6">
+            <div id="input-group-checkbox"></div>
+          </div>
+          <div class="col-lg-6">
+            <div id="input-group-radio"></div>
+          </div>
+        </div>
+      </form>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;xxxxxx&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Button addons</h3>
+      <form class="bs-example bs-example-form" role="form">
+        <div class="row">
+          <div class="col-lg-6">
+            <div id="input-group-button-addon"></div>
+          </div>
+          <div class="col-lg-6">
+            <div id="input-group-button-addon-right"></div>
+          </div>
+        </div>
+      </form>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;xxxxxx&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Buttons with dropdowns</h3>
+      <form class="bs-example bs-example-form" role="form">
+        <div class="row">
+          <div class="col-lg-6">
+            <div id="input-group-button-dropdown-addon"></div>
+          </div>
+          <div class="col-lg-6">
+            <div id="input-group-button-dropdown-addon-right"></div>
+          </div>
+        </div>
+      </form>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;xxxxxx&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Segmented buttons</h3>
+      <form class="bs-example bs-example-form" role="form">
+        <div class="row">
+          <div class="col-lg-6">
+            <div id="input-group-button-segmented"></div>
+          </div>
+          <div class="col-lg-6">
+            <div id="input-group-button-segmented-right"></div>
+          </div>
+        </div>
+      </form>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;xxxxxx&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums"></pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h1>Tabs</h1>
+      <h3>Navs</h3>
+      <div class="bs-example">
+        <ul id="nav-tabs"></ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Progress Bar -->
+      <h1>Progress Bar</h1>
+      <h3>Basic example</h3>
+      <div class="bs-example">
+        <div id="progress-bar"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: "progress-bar",
+  el: "#progress-bar",
+  value: 80
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar&quot; class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;80&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;transition: width 200ms ease-in-out; -webkit-transition: width 200ms ease-in-out; width: 80%;&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;80%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>With label</h3>
+      <p>You can enable the progress value label adding the option <code>withLabel: true</code>. Also you can define the format of the label string defining the <code>label</code> option:</p>
+      <div class="bs-example">
+        <div id="progress-bar-with-label"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-with-label&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;progress-bar&quot;,
+  el: &quot;#progress-bar-with-label&quot;,
+  value: 80,
+  withLabel: true,
+  label: function (value) {
+    return value + &quot;% Complete&quot;
+  }
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-with-label&quot; class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;80&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;transition: width 200ms ease-in-out; -webkit-transition: width 200ms ease-in-out; width: 80%;&quot;&gt;80% Complete&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Contextual alternatives</h3>
+      <p>You can define contextual alternatives to the progress bars defining the <code>type</code> option. The valid values are <code>"success", "info", "warning", "danger"</code>:</p>
+      <div class="bs-example">
+        <div id="progress-bar-success"></div>
+        <div id="progress-bar-info"></div>
+        <div id="progress-bar-warning"></div>
+        <div id="progress-bar-danger"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-success&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;progress-bar&quot;,
+  el: &quot;#progress-bar-success&quot;,
+  value: 40,
+  type: &quot;success&quot;
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-success&quot; class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;transition: width 200ms ease-in-out; -webkit-transition: width 200ms ease-in-out; width: 40%;&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;40%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Striped</h3>
+      <p>You can render the striped version of the bars setting the option <code>striped: true</code>:</p>
+      <div class="bs-example">
+        <div id="progress-bar-success-striped"></div>
+        <div id="progress-bar-info-striped"></div>
+        <div id="progress-bar-warning-striped"></div>
+        <div id="progress-bar-danger-striped"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-success-striped&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;progress-bar&quot;,
+  el: &quot;#progress-bar-success-striped&quot;,
+  value: 40,
+  type: &quot;success&quot;,
+  striped: true
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-success-striped&quot; class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-success progress-bar-striped&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;transition: width 200ms ease-in-out; -webkit-transition: width 200ms ease-in-out; width: 40%;&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;40%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Active</h3>
+      <p>You can set the progress bar as active setting the options <code>active: true</code> and <code>striped: true</code>. This creates an animated striped bar:</p>
+      <div class="bs-example">
+        <div id="progress-bar-active"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-active&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;progress-bar&quot;,
+  el: &quot;#progress-bar-active&quot;,
+  value: 40,
+  type: &quot;success&quot;,
+  active: true,
+  striped: true
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-active&quot; class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-success active progress-bar-striped&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;transition: width 200ms ease-in-out; -webkit-transition: width 200ms ease-in-out; width: 40%;&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;40%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Stacked</h3>
+      <p>You can stack multiple bars in the same progress bar defining the <code>value</code> option as an array of bars:</p>
+      <div class="bs-example">
+        <div id="progress-bar-stacked"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-stacked&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;progress-bar&quot;,
+  el: &quot;#progress-bar-stacked&quot;,
+  value: [
+    {value: 35, type: &quot;success&quot;},
+    {value: 20, type: &quot;warning&quot;, striped: true},
+    {value: 10, type: &quot;danger&quot;}
+  ],
+  type: &quot;success&quot;,
+  active: true,
+  striped: true
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-stacked&quot; class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;35&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 35%;&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;35%&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;progress-bar progress-bar-warning progress-bar-striped&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 20%;&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;20%&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;progress-bar progress-bar-danger&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;10&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 10%;&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;10%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+      </div><!-- hightlight -->
+
+      <h3>Animated</h3>
+      <p>You can change the animation duration of the progress bar when you update the value of the progress setting the <code>animationDuration</code> option. By default, every progress bar is animated, you can disable the animation setting the option <code>animate: false</code>. Note that this is <b>not</b> part of the Bootstrap's behavior:</p>
+      <div class="bs-example">
+        <div id="progress-bar-animated"></div>
+      </div>
+      <div class="highlight">
+        <div class="html">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-animated&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="js">
+          <pre class="prettyprint linenums">Yuri.ui({
+  view: &quot;progress-bar&quot;,
+  el: &quot;#progress-bar-animated&quot;,
+  striped: true,
+  active: true,
+  animationDuration: 1000,
+  withLabel: true,
+  value: 80
+});</pre>
+        </div>
+
+        <div class="code-result">
+          <pre class="prettyprint linenums">&lt;div id=&quot;progress-bar-animated&quot; class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar active progress-bar-striped&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;27&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;transition: width 1000ms ease-in-out; -webkit-transition: width 1000ms ease-in-out; width: 27%;&quot;&gt;27%&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div><!-- hightlight -->
+
+    <div>
+  </body>
+</html>
