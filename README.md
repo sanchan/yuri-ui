@@ -11,10 +11,12 @@ Because in some moment I found interesting to create a tool for fast prototyping
 <p>Also you can set an icon setting the <code>icon</code> option. You can use any prefix used by <code>Glyphicon</code> icons set. For example, if you want to use the <code>glyphicon-star</code> icon, the you just need to set <code>icon: "star"</code>:</p>
 
 ### HTML
-```<button id="button-primary"></button>```
+```html
+<button id="button-primary"></button>
+```
 
 ### Javascript
-```
+```javascript
 Yuri.ui({
   view: "button",
   el: "#button-primary",
@@ -25,7 +27,7 @@ Yuri.ui({
 ```
 
 ### Result
-```
+```html
 <button id="button-primary" class="btn btn-primary">
     <span class="text">Primary  </span>
     <span class="glyphicon glyphicon-star"></span>
